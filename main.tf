@@ -26,7 +26,7 @@ resource "null_resource" "api_create_key" {
   # On failure, this will attempt to execute the false command in the
   # shell environment running terraform, causing an error
   provisioner "local-exec" {
-    command = "echo \"status coode: ${data.http.api_create_key.status_code}\" && ${contains([200, 201], data.http.api_create_key.status_code)}"
+    command = "echo \"status code: ${data.http.api_create_key.status_code}\" && ${contains([200, 201], data.http.api_create_key.status_code)}"
   }
   triggers = {
     always_run = timestamp()

@@ -7,6 +7,10 @@ Generates a random API key for an existing Houston instance. Saves the generated
 ### Usage
 
 ```hcl-terraform
+provider "google" {
+  project = "<your Google Cloud project ID>"
+}
+
 // Houston API service
 module "houston" {
   source = "datasparq-ai/houston/google"
