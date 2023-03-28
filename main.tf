@@ -43,3 +43,9 @@ resource "google_secret_manager_secret_version" "houston_key" {
   secret =  google_secret_manager_secret.houston_key.id
   secret_data = random_password.houston_key.result
 }
+
+output "id" {
+  description = "The key's ID, which is used to authenticate with the API"
+  value = google_secret_manager_secret_version.houston_key.secret_data
+  sensitive = true
+}

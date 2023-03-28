@@ -12,7 +12,7 @@ variable "secret_name" {
 
 variable "houston_base_url" {
   type = string
-  description = "URL of a Houston API service, including the API prefix, e.g. 'http://127.0.0.1//api/v1'."
+  description = "URL of a Houston API service, including the API prefix, e.g. 'http://127.0.0.1/api/v1'."
 }
 
 variable "houston_password" {
