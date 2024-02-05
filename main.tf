@@ -36,7 +36,7 @@ resource "null_resource" "api_create_key" {
 resource "google_secret_manager_secret" "houston_key" {
   secret_id =  var.secret_name
   replication {
-    automatic = true
+    auto {}
   }
 }
 resource "google_secret_manager_secret_version" "houston_key" {
